@@ -1,0 +1,15 @@
+These are the steps that we must follow the make our project from raw data to a well trained model. I have divided the complete road map of implementation into 7 phases and they are as follows:
+
+1. Understanding the problem: 
+Problem Statement: I need to figure out whether a passanger is going to survive or not based on historical data in train.csv file, and then try it out on test.csv and predict
+Type: Supervised Learning: This is a supervised learning because the data we have has both input and output pair. And my final model will be trained on this supervised data and then we will give unsupervised data to check the model accuracy. Also it's an classification problem, as it has 0 or 1 as output (dead or alive)
+Target Column: My target column is the Survived, where 0 = dead, and 1 = alive.
+Features (Variables): Passanger_ID, Age, Gender, Fare, etc are there to be used.
+
+2. Load & Explore Data:
+I just loaded data into python jupyter notbook using pandas's read_csv() funtion, and then saw some basic infos of data using, .info(), .describe(), .head(), .isnull(), .isnull().sum() funtions to get a quick overview of data.
+
+3. Data Cleaning and Preprocessing:
+According to my learning this is the most critical aspect of complete process because the outcomes and model's accuracy is going to depends on it. In this step i will clean data such as eliminating missing values, dropping useless columns such as cabin that had a lot of missing values, and converting categorical columns to numeric values, male = 1, female = 0. I created a seprate funtion for data cleaning and then later i called it. The data is successfully cleaned and now is prepared for production
+
+4. Model Training and Evaluation:
